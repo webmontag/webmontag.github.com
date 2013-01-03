@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<!-- Hilfe + Test: w3schools.com-->
+<html>
+    
+<head>
+<title>Webmontag Köln</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <!--CSS EINBINDEN-->   
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700,900|Vollkorn' rel='stylesheet' type='text/css'>
+    
+    <!--favicon--> 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> 
+  
+</head>
+    
+<body>    
+    <!--------------------HEADER------------------>
+        <header> 
+            <figure id="h_header" style="position:relative; z-index:1;">
+                <img src="header.jpg" alt="header">
+            </figure>
+
+            <figure id="h_logo" style="position:absolute; top:100px; left:400px; z-index:2;">
+                 <img src="logo.png" alt="logo">
+            </figure>
+            
+            <a href="">
+                <figure id="h_facebook">
+                    <img src="icon_facebook.png" alt="facebook">
+                </figure>
+            </a>
+            
+            <a href="">
+                <figure id="h_twitter">
+                    <img src="icon_twitter.png" alt="twitter">
+                </figure>
+            </a>
+                
+            <a href="">    
+                <figure id="h_nerdhub">
+                    <img src="icon_nerdhub.png" alt="nerdhub">
+                </figure>
+            </a>
+            
+            
+        </header>
+    
+     <!--gruene_Linie-->
+     <div class="g_lines">        
+     </div>
+
+    
+     <!-------------SCOPE---------------->
+    <section class="content">
+        
+       
+        
+        <!--FLIEßTEXT-->
+        <div id="text">
+            <h1>
+                    Alles begann in Köln …
+            </h1>
+
+             <p id="fliesstext">
+                Web Montag ist ein informelles, nicht-kommerzielles, dezentral organisiertes Treffen, das zum Ziel hat, all diejenigen 
+                miteinander zu verbinden, die die Zukunft des Internet gestalten. Inspiriert von der Kultur Silicon Valleys startete der 
+                Web Montag gegen Ende 2005 in Köln als Versuch, ein bisschen “kalifornischen Sonnenschein” nach Deutschland zu bringen.
+            <br>
+            <br>
+                Alle, die mit Web 2.0 und benachbarten Themen zu tun haben und interessiert daran sind, ihr Wissen zu teilen und sich 
+                miteinander auszutauschen, sind herzlich willkommen. Ob Erfinder, Ingenieur, Designer, Gründer oder Finanzier – Web Montag 
+                ist die Gelegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von 
+                Webbegeisterten vorzustellen.            
+            </p>
+        </div>
+       
+        <!--BEGINN INFOBOX!!!!-->
+        <div id="terminbox">
+            <div id="box_content">
+                <h1>
+                    Nächster Termin
+                </h1>
+            
+                <!--Strich--><div class="graue_trennlinie"></div>
+            
+                <!--Datum-->
+                <div id="termin_datum">
+                    13.1.
+                </div>
+            
+                <!--Ort-->
+                <div id="termin_ort">
+                    <div id="termin_location">
+                     Location, 20 Uhr
+                    </div>
+                    <div id="termin_address">
+                       Grimmstraße 9, Ehrenfeld
+                    </div> 
+                </div>
+                               
+            
+                <!--Strich--><div class="graue_trennlinie"></div>
+                
+                <!--Button-->
+                <!--input type="submit" name="button_submit" value="Teilnehmen" /-->
+                <a href="#">
+                    <figure id="teilnehmen">
+                        <img src="button_nackt.png" alt="teilnehmen">
+                    </figure>
+                </a>
+                
+                <!--LINKS -->
+                <!-- TO DO: Links einfügen-->
+                <a  id="schreib_uns" href="">
+                    Du möchtest den nächsten Vortrag halten?<br>
+                    Dann schreib uns! 
+                </a>
+            </div>
+                
+                <!--background_fig-->
+                <figure class="bg_images" id="termin_bg">
+                    <img src="infokasten.png" alt="nächster Termin">
+                </figure>
+           
+        </div>
+        
+        
+        
+    </section>
+    <!--ENDE INFOBOX!!!!--> 
+    
+    <!--gruene_Linie-->
+    <div class="g_lines">        
+    </div>
+
+   
+    
+    
+<!--BEGINN MAP-->
+    <section>
+        <div id="pos" style="width:800px; height:600px;">
+            Die Location wird ermittelt...
+        </div>
+    
+        <script>
+            function initialize(coords) {
+                var latlng = new google.maps.LatLng(coords.latitude, coords.longitude);
+                var myOptions = {
+                
+                zoom: 8,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("pos"), myOptions);
+            var marker = new google.maps.Marker({
+            
+            position: latlng,
+            map: map,
+            title: "Nächster Standort"
+            
+            });
+            
+            }
+            
+            navigator.geolocation.getCurrentPosition(function(position){
+                initialize(position.coords);
+            }, function(){
+                document.getElementById('pos').innerHTML = 'Die Location konnte leider nicht ermittelt werden.';
+            });
+            
+        </script>
+    
+    </section>
+<!--ENDE MAP-->    
+
+    <div id="twitter_name">
+            #wmcgn
+    </div>
+<!--BEGINN TWEETBOX-->
+    <section class="content" id="twitter">
+        <div>
+            <figure id="vogel">
+                <img src="twitter_vogel.png" alt="Vogel">
+            </figure>
+        </div>
+        
+        <a class="twitter-timeline"  href="https://twitter.com/wmcgn" data-widget-id="286776854344503296">Tweets von @wmcgn</a>
+        <script>!function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;js.src="//platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js,fjs);
+            }}
+            (document,"script","twitter-wjs");
+        </script>
+           
+    </section>
+<!--ENDE TWEETBOX-->    
+    
+
+<!--BEGINN FORMULAR-->
+    <div class="content" id="formular">
+        <h1>
+            NEUE VOTRÄGE, IDEEN, FRAGEN? SCHREIB UNS!
+        </h1>
+        <form name="NachrichtSchreiben" action="#" method="post">
+            <textarea size="50" name="Nachricht" cols="50" rows="3">Deine Nachricht an uns...</textarea>
+            
+            <input type="text" size="50" class="fields" name="DeinName" placeholder="Dein Name">
+            <input type="text" class="fields" size="50" name="DeineEmail" placeholder="Deine E-Mail Adresse">
+        </form>
+        
+        <a href="#">
+            <figure id="absenden">
+                <img src="button_nackt.png" alt="Absenden">
+            </figure>
+        </a>
+    </div>
+    
+<!--ENDE FORMULAR-->
+    
+  <div class="g_lines"></div>
+    
+<!--BEGINN FOOTER-->    
+<footer class="content">
+        <div id="left_footer"><!--description-->
+            <h1 class="white">
+                Webmontag 
+            </h1>
+            <p id="footer_text">
+                Informell // nicht-kommerziell // dezentral <br>
+                Web 2.0 // Wissen // Anwender // Entwickler <br> 
+                Gründer // Pioniere // Venture capitalists <br>
+            </p>
+            
+            <p class="white">
+                © 2013 // Made with love by @railslove // All rights reserved
+            </p>
+        </div>
+           
+        <div id="right_footer"><!--address-->
+            <!--Strich--><div class="graue_trennlinie"></div>
+                
+            Webmontag Köln <br>
+            Verantwortlicher <br>
+            Grimmstraße 9, 50823 Köln <br>
+                
+            <!--Strich--><div class="graue_trennlinie"></div>
+                
+            0151 - 123 456 789 <br>
+            email@webmontagcgn.de <br>
+                
+            <!--Strich--><div class="graue_trennlinie"></div>
+    
+            <a href="">    
+                <figure id="f_nerdhub">
+                    <img src="icon_nerdhub.png" alt="nerdhub">
+                </figure>
+            </a>
+                
+            <a href="">
+                <figure id="f_twitter">
+                    <img src="icon_twitter.png" alt="twitter">
+                </figure>
+            </a>
+            
+            <a href="">
+                <figure id="f_facebook">
+                    <img src="icon_facebook.png" alt="facebook">
+                </figure>
+            </a>
+       
+        </div>    
+    </footer>
+</body>
+</html>    
