@@ -11,6 +11,7 @@
 .g_lines{
     height: 10px;
     background:#B2FC52;
+    width:1307px
 }
 
 .content{
@@ -59,7 +60,11 @@
     z-index:2;
 }    
  
-
+#first_line{
+    position:relative;
+    top:-40px;
+    left:-10px;
+}
 /***********************************************************/
 /***********************Überschriften***********************/
 /***********************************************************/
@@ -71,12 +76,12 @@ h1 {
 
 /***********************************************************/
 /***********************FLIEßTEXT***************************/
-/**********************************padding-left:100px;*************************/
+/***********************************************************/
 #text{
     float: left;
     width: 640px;
-    
-    padding-bottom: 30px;
+    padding-bottom: 18px;
+    margin-top:-30px;
 }
 
 #fliesstext{
@@ -95,9 +100,12 @@ h1 {
     width: 320px;  
     float:right;
     height:370px;
-    overflow: auto;
-    margin-top: -10px;
-    padding-right: 100px;
+    overflow: visible;
+    margin-top: -50px;
+    padding-left: 800px;
+    position:absolute;
+    z-index:3;
+    
 }
 
 #box_content{
@@ -138,7 +146,8 @@ h1 {
 
 #teilnehmen{
     potition:absolute;
-    padding-top: 80px
+    padding-top: 80px;
+    color:#9a9a9a;
 }
 
 #teiln_bg{
@@ -196,7 +205,6 @@ h1 {
 /***********************TWITTER*****************************/
 /***********************************************************/
 #twitter{
-    margin-top: 30px;
     height: 520px;
     overflow:hidden;
 }
@@ -229,6 +237,9 @@ h1 {
 #formular{
     padding-top:3px;
     height: 300px;
+    width:1307px;
+    margin-bottom:-20px;
+    padding-bottom:30px;
 }
 
 #formular_bg{
@@ -265,17 +276,17 @@ textarea{
     float:right;
     padding-top: 48px;
     position:absolute;
-    padding-left: 470px;
+    padding-left: 410px;
     z-index:1;
+        color:#9a9a9a;
 }
 
 #submit_bg{
     width: 165px;
     float:left;
     padding-top: 20px;
-    padding-left: 580px;
-    position: Absolute;
-    z-index:0;
+    padding-left: 515px;
+    position: absolute;
 }
 
 
@@ -284,7 +295,7 @@ textarea{
 /***********************************************************/
 #backtotop{
     position:absolute;
-    margin:-20px;
+    margin:-29px;
     margin-left:970px;
 }
 
@@ -320,7 +331,7 @@ footer{
 }
 
 #copyright{
-    padding-top:90px;
+    padding-top:100px;
     font-weight:bold;
 }
 
@@ -329,14 +340,15 @@ footer{
     text-align:right;
     font-weight: bold;
     padding-top: 80px;
-    width: 260px;
+    width: 180px;
     float: right;
 }
 
 .icons{
     margin-right: -40px;
     overflow:auto;
-    float:right
+    float:right;
+    margin-top:-10px
 }
 
 #f_facebook{
