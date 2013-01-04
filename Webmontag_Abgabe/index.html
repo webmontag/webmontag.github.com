@@ -1,10 +1,14 @@
 <!DOCTYPE HTML>
 <!-- Hilfe + Test: w3schools.com-->
 <html>
+<head>
     
-    <head>
-<title>Webmontag Köln</title>
+    <title>Webmontag Köln</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="Webmontag, wmdgn, Köln, Webmontag Köln, railslove" />
+    <meta name="description" content="Webmontag Köln - Informelle Treffen derjeniger, welche die Zukuft des Internets gestalten." />
+    <meta name="author" content="Ngoc-Anh Dang - Laura-Maria Hermann" />
+    
     
     <!--CSS EINBINDEN-->   
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -19,8 +23,6 @@
     <!-- Map-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
     <script>
 		$(document).ready(function(){
@@ -96,8 +98,8 @@
 				  ib.open(theMap,marker);
 				});
 		  	}
-		</script>
-	</head>
+        </script>
+</head>
 
     
 <body onload="initialize()">    
@@ -107,7 +109,7 @@
                 <img src="header.jpg" alt="header">
             </figure>
 
-            <figure id="h_logo" style="position:absolute; top:100px; left:400px; z-index:2;">
+            <figure id="h_logo">
                  <img src="logo.png" alt="logo">
             </figure>
             
@@ -150,10 +152,11 @@
                 <div id="termin_ort">
                     <div id="termin_location">
                      Location, 20 Uhr
+                        <div id="termin_address">
+                            Grimmstraße 9, Ehrenfeld
+                        </div>
                     </div>
-                    <div id="termin_address">
-                       Grimmstraße 9, Ehrenfeld
-                    </div> 
+                     
                 </div>
                                
             
@@ -162,13 +165,14 @@
                 <!--Button-->
                 <!--input type="submit" name="button_submit" value="Teilnehmen" /-->
                 <a class="button_font" href="#">
-                    Teilnehmen
-                    
+                    <div id="teilnehmen">
+                        Teilnehmen
+                    </div>
                 </a>
                 
-                <figure id="teilnehmen">
-                        <img src="button_nackt.png" alt="teilnehmen">
-                    </figure>
+                <figure id="teiln_bg">
+                    <img src="button_nackt.png" alt="teilnehmen">
+                </figure>
                 
                 <!--LINKS -->
                 <!-- TO DO: Links einfügen-->
@@ -177,9 +181,13 @@
                     Dann schreib uns! 
                 </a>
             </div>
-        </div><!--ENDE INFOBOX!!!!--> 
+            <figure id="spitze">
+                <img src="terminspitze.png" alt="">
+            </figure>
+    </div>
+    <!--ENDE INFOBOX!!!!--> 
 
-   <section> 
+   <section class="content"> 
         
      <!-- SCOPE -->
    
@@ -195,7 +203,7 @@
             <br>
                 Alle, die mit Web 2.0 und benachbarten Themen zu tun haben und interessiert daran sind, ihr Wissen zu teilen und sich 
                 miteinander auszutauschen, sind herzlich willkommen. Ob Erfinder, Ingenieur, Designer, Gründer oder Finanzier – Web Montag 
-                ist die Geegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von 
+                ist die Gelegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von 
                 Webbegeisterten vorzustellen.            
             </div>
         </div>
@@ -212,13 +220,15 @@
     <div id="twitter_name">#wmcgn</div>
     
 <!--BEGINN TWEETBOX-->
-    <section id="twitter">
+    <section class="content" id="twitter">
         <div>
             <figure id="vogel">
                 <img src="twitter_vogel.png" alt="Vogel">
             </figure>
         </div>
-        <script>
+        
+        <div id="tbox">
+            <script>
             new TWTR.Widget({
                 version: 2,
                 type: 'profile',
@@ -249,11 +259,15 @@
                 }
             }).render().setUser('wmcgn').start();
         </script>   
+        </div>
+        
     </section>
 <!--ENDE TWEETBOX-->
 
 <!--BEGINN FORMULAR-->
-    <div id="formular">
+    <div id="formular_bg">
+        
+        <div class="content" id="formular">
         <h1>
             NEUE VOTRÄGE, IDEEN, FRAGEN? SCHREIB UNS!
         </h1>
@@ -263,78 +277,73 @@
             <input type="text" size="50" class="fields" name="DeinName" placeholder="Dein Name">
             <input type="text" class="fields" size="50" name="DeineEmail" placeholder="Deine E-Mail Adresse">
         </form>
-        
 
         <a class="button_font" href="#">
-            Absenden
-            <figure>
-                <img src="button_nackt.png" alt="Absenden">
+            <div id="absenden">
+                Absenden
+            </div>
+            <figure id="submit_bg">
+                <img src="button_nackt.png" alt="submit">
             </figure>
         </a>
-
+        </div>
         
     </div>
     
 <!--ENDE FORMULAR-->
-    
+
+    <a href="#">
+        <figure>
+            <img src="backtotop.png" id="backtotop" alt="backtoptop">
+        </figure>
+    </a>
+        
+        
   <div class="g_lines"></div>
     
 <!--BEGINN FOOTER-->    
 <footer>
-        <div id="left_footer"><!--description-->
-            
+    <div class="content">
+        <!--description-->
+        <div id="left_footer">
             <div id="footer_text">
-                <h1 class="white">
-                Webmontag 
-                </h1>
+                <h1 class="white">Webmontag</h1>
                 Informell // nicht-kommerziell // dezentral <br>
                 Web 2.0 // Wissen // Anwender // Entwickler <br> 
                 Gründer // Pioniere // Venture capitalists <br>
             </div>
-            
-            <div class="white" id="copyright">
-                © 2013 // Made with love by @railslove // All rights reserved
-            </div>
+            <div class="white" id="copyright">© 2013 // Made with love by @railslove // All rights reserved</div>
         </div>
-           
+        <!--address-->
         <div class="content" id="right_footer">
-            <!--address-->
-            
             <!--Strich--><div class="graue_trennlinie"></div>
-
             Webmontag Köln <br>
             Verantwortlicher <br>
             Grimmstraße 9, 50823 Köln <br>
- 
-            <!--Strich--><div class="graue_trennlinie"></div>
-                
+            <!--Strich--><div class="graue_trennlinie"></div>        
             0151 - 123 456 789 <br>
-            email@webmontagcgn.de <br>
-                
+            email@webmontagcgn.de <br> 
             <!--Strich--><div class="graue_trennlinie"></div>
-    
+
             <div class="icons">
                 <a href="http://www.nerdhub.de/events/42-webmontag-koln/dates/1183">    
                     <figure id="f_nerdhub">
                         <img src="icon_nerdhub.png" alt="nerdhub">
                     </figure>
-                </a>
-                    
+                </a> 
                 <a href="https://twitter.com/wmcgn">
                     <figure id="f_twitter">
                         <img src="icon_twitter.png" alt="twitter">
                     </figure>
                 </a>
-                
                 <a href="">
                     <figure id="f_facebook">
                         <img src="icon_facebook.png" alt="facebook">
                     </figure>
                 </a>
             </div>
-            
-       
         </div>    
+    </div> 
     </footer>
 </body>
 </html>    
