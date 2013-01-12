@@ -75,13 +75,13 @@
 		        boxText.innerHTML = contentString;
 
 		        var myOptions = {
-		                 content: boxText
-		                ,disableAutoPan: false
-		                ,maxWidth: 0
-		                ,pixelOffset: new google.maps.Size(-140, 0)
-		                ,zIndex: null
-		                ,boxStyle: {
-		                	width: "340px"
+		                 content: boxText,
+		                disableAutoPan: false,
+		                maxWidth: 0,
+		                pixelOffset: new google.maps.Size(-140, 0),
+		                zIndex: null,
+		                boxStyle: {
+                            width: "340px"
 		                 }
 		                ,closeBoxMargin: "10px 2px 2px 2px"
 		                ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
@@ -103,6 +103,7 @@
 
     
 <body onload="initialize()">    
+    <div id="frap">
     <!-- HEADER -->
         <header> 
             <figure id="h_header">
@@ -279,12 +280,14 @@
         </form>
 
         <a class="button_font" href="#">
-            <div id="absenden">
-                Absenden
+            <div id="button_frap">
+                <div id="absenden">
+                    Absenden
+                </div>
+                <figure id="submit_bg">
+                    <img src="button_nackt.png" alt="submit">
+                </figure>
             </div>
-            <figure id="submit_bg">
-                <img src="button_nackt.png" alt="submit">
-            </figure>
         </a>
         </div>
         
@@ -345,5 +348,6 @@
         </div>    
     </div> 
     </footer>
+    </div>
 </body>
 </html>    

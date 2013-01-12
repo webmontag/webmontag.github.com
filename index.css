@@ -1,22 +1,27 @@
 /***********************************************************/
 /***********************GESAMT******************************/
-/*******************************margin: 0 auto;****************************/
+/***********************************************************/
 * {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color:#333333;
 }
 
+#frap{
+    width: 1307px;
+    margin: 0 auto;
+}
+
 /*gruene Linien*/
 .g_lines{
     height: 10px;
     background:#B2FC52;
-    width:1307px
+    width:1307px;
 }
 
 .content{
     width:960px;
-    padding-left: 100px;
+    margin: 0 auto;
 }
 
 
@@ -28,15 +33,18 @@
 #h_header{ 
     position:relative;
     top: -20px;
-    left: -60px; 
+    left: -40px;
     z-index:1;
+    overflow: visible;
+    width:1307px;
 }
 
 #h_logo{ 
-    position:absolute; 
-    top:80px; 
-    left:350px; 
+    position:relative; 
+    top:-350px; 
     z-index:2;
+    margin: 0 auto;
+    width: 530px;
 }
 
 #h_facebook{
@@ -63,7 +71,7 @@
 #first_line{
     position:relative;
     top:-40px;
-    left:-10px;
+    margin-top:-174px;
 }
 /***********************************************************/
 /***********************Überschriften***********************/
@@ -82,12 +90,15 @@ h1 {
     width: 640px;
     padding-bottom: 18px;
     margin-top:-30px;
+    margin-left:-3%
+    
 }
 
 #fliesstext{
     font-family: 'Vollkorn', serif;
     clear: left;
     width: 640px;
+    
 }
 
 
@@ -155,7 +166,6 @@ h1 {
 }
 
 
-
 #schreib_uns{
     font-size:12px;
     color: white
@@ -171,12 +181,13 @@ h1 {
         
 
 
-/***********************************************************/
-/***********************MAP*******************************/
-/********************************************************/
+/**********************************************************/
+/***********************MAP********************************/
+/**********************************************************/
 #map {
     float: left;
     margin-bottom: 54px;
+    width: 1307px;
 }
 
 #map_canvas {
@@ -240,6 +251,7 @@ h1 {
     width:1307px;
     margin-bottom:-20px;
     padding-bottom:30px;
+    padding-left: 180px;
 }
 
 #formular_bg{
@@ -270,15 +282,17 @@ textarea{
     font-size: 17px;
     text-align:center;
 }
+#button_frap{
+}
 
 #absenden{
-    width: 460px;
     float:right;
-    padding-top: 48px;
-    position:absolute;
-    padding-left: 410px;
     z-index:1;
-        color:#9a9a9a;
+    color:#9a9a9a;
+    width:87px;
+    position:absolute;
+    left: 670px;
+    bottom: -65px;
 }
 
 #submit_bg{
@@ -296,7 +310,8 @@ textarea{
 #backtotop{
     position:absolute;
     margin:-29px;
-    margin-left:970px;
+    float:right;
+    margin-left:1060px;
 }
 
 .white{
