@@ -1,0 +1,23 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}
+mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}
+figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+/*! Webmontag stuff */*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#wrap{min-width:320px;max-width:1260px;margin:0 auto}
+#page{background:url(../images/header.jpg) top center no-repeat}#page-header{padding-top:100px}#page-header h1{margin:0 auto;max-width:529px;height:169px;background:url(../images/logo.png) top center no-repeat}
+#social-bar{margin-top:15px;text-align:center}#social-bar li{display:inline-block}#social-bar a{height:40px;width:40px;display:block}#social-bar .facebook{background:url(../images/icon_facebook.png) top center no-repeat}
+#social-bar .twitter{background:url(../images/icon_twitter.png) top center no-repeat}#social-bar .nerdhub{background:url(../images/icon_nerdhub.png) top center no-repeat}
+#page-content{padding:0 11.905%;margin-top:150px}#intro{width:64.583333333%;float:left}#info-box{margin-top:-37px;padding-top:37px;width:33.33333333333%;height:337px;float:right;background:#333;position:relative}
+.triangle{position:absolute;display:block;border-style:solid;border-width:70px 160px 0 160px;border-color:#333 transparent transparent transparent;bottom:-70px;z-index:2}
+#page-map{z-index:1;clear:both;height:500px;width:100%;border-top:11px solid #b2fc52}#page-footer{padding-top:500px;clear:both}.hide-text{text-indent:100%;white-space:nowrap;overflow:hidden}
+@media screen and (max-width:1280px){#page,#page-header h1,#social-bar li a{-webkit-background-size:100% auto;-moz-background-size:100% auto;background-size:100% auto}
+}@media screen and (max-width:1024px){#page-header{padding-top:20px}}@media screen and (max-width:768px){#page-header h1{width:397px;height:127px}#page-main{margin-top:100px}
+}@media screen and (max-width:600px){#page-header h1{width:265px;height:85px}}@media screen and (max-width:480px){#page{padding:0 5%}#page-header h1{max-width:320px;height:100px}
+#social-bar li a{display:none}}

@@ -8,339 +8,58 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,700,900|Vollkorn" rel="stylesheet" type="text/css" />
-	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="shortcut icon" href="favicon.ico" />
 
-	<!--twitter-->
-	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 
-	<!-- Map-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			// scroll body to 0px on click
-			$('#backtotop').click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				}, 800);
-				return false;
-			});
-		});
-	</script>
-
-	<!--Einbinden Javascript-->
-	<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-	<script src="js/infobox.min.js"></script>
-	<script>
-	function initialize() {
-		  var contentString = '<p>Example Location<br />Grimmstraße 9<br />50823 Köln Ehrenfeld<br /><br /><a href="https://twitter.com/wmcgn">www.twitter.com/wmcgn</a></p>' +
-			'<img src="infoWindowImage.png" alt="Image" align="left" class="infoBoxIcon"/>'
-
-		  var secheltLoc = new google.maps.LatLng(50.94895731663069, 6.986802443861961);
-		  var myMapOptions = {
-				zoom: 12
-				,center: secheltLoc
-				,mapTypeId: google.maps.MapTypeId.ROADMAP
-		  };
-		var theMap = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);
-		var marker = new google.maps.Marker({
-		  map: theMap,
-		  draggable: false,
-		  position: new google.maps.LatLng(50.94895731663069, 6.986802443861961),
-		  visible: true
-		  });
-
-				var boxText = document.createElement("div");
-				boxText.style.cssText = "margin-top: 8px; padding: 20px; overflow: hidden; color: #FFFFFF; font-weight: bold; height: 97px;" +
-				'background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MjgyOCIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);' +
-				'background: -moz-linear-gradient(top,  rgba(40,40,40,0.9) 0%, rgba(0,0,0,0.9) 100%);' +
-				'background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(40,40,40,0.8)), color-stop(100%,rgba(0,0,0,0.9)));' +
-				'background: -webkit-linear-gradient(top,  rgba(40,40,40,0.9) 0%,rgba(0,0,0,0.9) 100%);' +
-				'background: -o-linear-gradient(top,  rgba(40,40,40,0.9) 0%,rgba(0,0,0,0.9) 100%);' +
-				'background: -ms-linear-gradient(top,  rgba(40,40,40,0.9) 0%,rgba(0,0,0,0.9) 100%);' +
-				'background: linear-gradient(to bottom,  rgba(40,40,40,0.9) 0%,rgba(0,0,0,0.9) 100%);' +
-				'filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=\'#cc282828\', endColorstr=\'#cc000000\',GradientType=0 );' +
-
-				'border-radius: 5px;' +
-				'border: 1px solid #000000;';
-
-				boxText.innerHTML = contentString;
-
-				var myOptions = {
-						 content: boxText,
-						disableAutoPan: false,
-						maxWidth: 0,
-						pixelOffset: new google.maps.Size(-140, 0),
-						zIndex: null,
-						boxStyle: {
-							width: "340px"
-						 }
-						,closeBoxMargin: "10px 2px 2px 2px"
-						,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
-						,infoBoxClearance: new google.maps.Size(1, 1)
-						,isHidden: false
-						,pane: "floatPane"
-						,enableEventPropagation: false
-				};
-
-				var ib = new InfoBox(myOptions);
-
-
-				google.maps.event.addListener(marker, 'click', function() {
-				  ib.open(theMap,marker);
-				});
-			}
-		</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+<body>
+	<div id="wrap">
+		<div id="page">
+			<div id="page-header">
+				<header>
+					<h1 class="hide-text">Webmontag Köln</h1>
+				</header>
 
-<body onload="initialize()">
-	<div id="frap">
-	<!-- HEADER -->
-		<header>
-			<figure id="h_header">
-				<img src="header.jpg" alt="header">
-			</figure>
+				<aside>
+					<ul id="social-bar">
+						<li><a class="facebook hide-text" href="https://facebook.com">Facebook</a></li>
+						<li><a class="twitter hide-text" href="https://twitter.com/wmcgn">@wmcgn</a></li>
+						<li><a class="nerdhub hide-text" href="http://www.nerdhub.de/events/42-webmontag-koln/">Nerdhub</a></li>
+					</ul>
+				</aside>
+			</div>
 
-			<figure id="h_logo">
-				 <img src="logo.png" alt="logo">
-			</figure>
+			<div id="page-content">
+				<div id="intro">
+					<h2>Alles begann in Köln…</h2>
+					<p>Web Montag ist ein informelles, nicht-kommerzielles, dezentral organisiertes Treffen, das zum Ziel hat, all diejenigen
+					miteinander zu verbinden, die die Zukunft des Internet gestalten. Inspiriert von der Kultur Silicon Valleys startete der
+					Web Montag gegen Ende 2005 in Köln als Versuch, ein bisschen “kalifornischen Sonnenschein” nach Deutschland zu bringen.</p>
 
-			<!--FACEBOOK KONTAKT EINFÜGEN-->
-			<a href="">
-				<figure id="h_facebook">
-					<img src="icon_facebook.png" alt="facebook">
-				</figure>
-			</a>
-
-			<a href="https://twitter.com/wmcgn">
-				<figure id="h_twitter">
-					<img src="icon_twitter.png" alt="twitter">
-				</figure>
-			</a>
-
-			<a href="http://www.nerdhub.de/events/42-webmontag-koln/dates/1183">
-				<figure id="h_nerdhub">
-					<img src="icon_nerdhub.png" alt="nerdhub">
-				</figure>
-			</a>
-		</header>
-
-	 <!--gruene_Linie--><div class="g_lines" id="first_line"></div>
-
-	<div id="terminbox"> <!--BEGINN INFOBOX!!!!-->
-			<div id="box_content">
-				<h1 class="white">
-					Nächster Termin
-				</h1>
-
-				<!--Strich--><div class="graue_trennlinie"></div>
-
-				<!--Datum-->
-				<div id="termin_datum">
-					13.1.
+					<p>Alle, die mit Web 2.0 und benachbarten Themen zu tun haben und interessiert daran sind, ihr Wissen zu teilen und sich
+					miteinander auszutauschen, sind herzlich willkommen. Ob Erfinder, Ingenieur, Designer, Gründer oder Finanzier – Web Montag
+					ist die Gelegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von
+					Webbegeisterten vorzustellen.</p>
 				</div>
-
-				<!--Ort-->
-				<div id="termin_ort">
-					<div id="termin_location">
-					 Location, 20 Uhr
-						<div id="termin_address">
-							Grimmstraße 9, Ehrenfeld
-						</div>
-					</div>
-
+				<div id="info-box">
+					<h3>Nächster Termin</h3>
+					<span class="triangle"></span>
 				</div>
-
-
-				<!--Strich--><div class="graue_trennlinie"></div>
-
-				<!--Button-->
-				<!--input type="submit" name="button_submit" value="Teilnehmen" /-->
-				<a class="button_font" href="#">
-					<div id="teilnehmen">
-						Teilnehmen
-					</div>
-				</a>
-
-				<figure id="teiln_bg">
-					<img src="button_nackt.png" alt="teilnehmen">
-				</figure>
-
-				<!--LINKS -->
-				<!-- TO DO: Links einfügen-->
-				<a  id="schreib_uns" href="">
-					Du möchtest den nächsten Vortrag halten?<br>
-					Dann schreib uns!
-				</a>
 			</div>
-			<figure id="spitze">
-				<img src="terminspitze.png" alt="">
-			</figure>
-	</div>
-	<!--ENDE INFOBOX!!!!-->
 
-   <section class="content">
+			<div id="page-map"></div>
 
-	 <!-- SCOPE -->
-
-		<!--FLIEßTEXT-->
-		<div id="text">
-			<h1>Alles begann in Köln …  </h1>
-
-			 <div id="fliesstext">
-				Web Montag ist ein informelles, nicht-kommerzielles, dezentral organisiertes Treffen, das zum Ziel hat, all diejenigen
-				miteinander zu verbinden, die die Zukunft des Internet gestalten. Inspiriert von der Kultur Silicon Valleys startete der
-				Web Montag gegen Ende 2005 in Köln als Versuch, ein bisschen “kalifornischen Sonnenschein” nach Deutschland zu bringen.
-			<br>
-			<br>
-				Alle, die mit Web 2.0 und benachbarten Themen zu tun haben und interessiert daran sind, ihr Wissen zu teilen und sich
-				miteinander auszutauschen, sind herzlich willkommen. Ob Erfinder, Ingenieur, Designer, Gründer oder Finanzier – Web Montag
-				ist die Gelegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von
-				Webbegeisterten vorzustellen.
-			</div>
-		</div>
-
-	</section>
-
-	<!--gruene_Linie--><div class="g_lines"></div>
-
-<!--BEGINN MAP-->
-	<article id="map">
-	<div id="map_canvas"></div>
-<!--ENDE MAP-->
-
-	<div id="twitter_name">#wmcgn</div>
-
-<!--BEGINN TWEETBOX-->
-	<section class="content" id="twitter">
-		<div>
-			<figure id="vogel">
-				<img src="twitter_vogel.png" alt="Vogel">
-			</figure>
-		</div>
-
-		<div id="tbox">
-			<script>
-			new TWTR.Widget({
-				version: 2,
-				type: 'profile',
-				rpp: 4,
-				interval: 30000,
-				width: 460,
-				height: 455,
-				theme: {
-					shell: {
-						background: '#ffffff',
-						color: '#333333'
-					},
-					tweets: {
-						background: '#ffffff',
-						color: '#333333',
-						links: '#818181'
-					}
-				},
-				features: {
-					scrollbar: true,
-					loop: true,
-					live: false,
-					hashtags: true,
-					timestamp: true,
-					toptweets: true,
-					behavior: 'default',
-					avatars: true
-				}
-			}).render().setUser('wmcgn').start();
-		</script>  
-		</div>
-
-	</section>
-<!--ENDE TWEETBOX-->
-
-<!--BEGINN FORMULAR-->
-	<section id="formular_bg">
-
-		<div class="content" id="formular">
-		<h1 >
-			NEUE VOTRÄGE, IDEEN, FRAGEN? SCHREIB UNS!
-		</h1>
-		<form name="NachrichtSchreiben" action="#" method="post">
-			<textarea size="50" name="Nachricht" cols="50" rows="3">Deine Nachricht an uns...</textarea>
-
-			<input type="text" size="50" class="fields" name="DeinName" placeholder="Dein Name">
-			<input type="text" class="fields" size="50" name="DeineEmail" placeholder="Deine E-Mail Adresse">
-		</form>
-
-		<a class="button_font" href="#">
-			<div id="button_frap">
-				<div id="absenden">
-					Absenden
-				</div>
-				<figure id="submit_bg">
-					<img src="button_nackt.png" alt="submit">
-				</figure>
-			</div>
-		</a>
-		</div>
-
-	</section>
-
-<!--ENDE FORMULAR-->
-
-	<a href="#">
-		<figure>
-			<img src="backtotop.png" id="backtotop" alt="backtoptop">
-		</figure>
-	</a>
-
-
-  <div class="g_lines"></div>
-
-<!--BEGINN FOOTER-->
-<footer>
-	<div class="content">
-		<!--description-->
-		<div id="left_footer">
-			<div id="footer_text">
-				<h1 class="white">Webmontag</h1>
-				Informell // nicht-kommerziell // dezentral <br>
-				Web 2.0 // Wissen // Anwender // Entwickler <br>
-				Gründer // Pioniere // Venture capitalists <br>
-			</div>
-			<div class="white" id="copyright">© 2013 // Made with love by @railslove // All rights reserved</div>
-		</div>
-		<!--address-->
-		<div class="content" id="right_footer">
-			<!--Strich--><div class="graue_trennlinie"></div>
-			Webmontag Köln <br>
-			Verantwortlicher <br>
-			Grimmstraße 9, 50823 Köln <br>
-			<!--Strich--><div class="graue_trennlinie"></div>
-			0151 - 123 456 789 <br>
-			email@webmontagcgn.de <br>
-			<!--Strich--><div class="graue_trennlinie"></div>
-
-			<div class="icons">
-				<a href="http://www.nerdhub.de/events/42-webmontag-koln/dates/1183">
-					<figure id="f_nerdhub">
-						<img src="icon_nerdhub.png" alt="nerdhub">
-					</figure>
-				</a>
-				<a href="https://twitter.com/wmcgn">
-					<figure id="f_twitter">
-						<img src="icon_twitter.png" alt="twitter">
-					</figure>
-				</a>
-				<a href="">
-					<figure id="f_facebook">
-						<img src="icon_facebook.png" alt="facebook">
-					</figure>
-				</a>
+			<div id="page-footer">
 			</div>
 		</div>
 	</div>
-	</footer>
-	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCCkoUqGUd-O3RI3cf3ZZZme0dIOri5Mf0&sensor=false"></script>
+	<script src="js/infobox.min.js"></script>
+	<script src="js/webmontag.js"></script>
 </body>
 </html>
