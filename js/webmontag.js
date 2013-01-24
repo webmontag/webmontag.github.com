@@ -67,19 +67,20 @@ function triangle() {
 		'border-left-width' : width,
         'border-right-width' : width
 	});
+
 }
 
 $(document).ready(function(){
 	// scroll body to 0px on click
-	$('#backtotop').click(function () {
-		$('body,html').animate({
+	$( '#backtotop' ).click( function( e ) {
+		e.preventDefault();
+
+		$( 'body, html' ).animate({
 			scrollTop: 0
-		}, 800);
-		return false;
-	});
+		}, 300 );
+	} );
 
 	initialize();
 	triangle();
 	$(window).resize( triangle );
-
 });
