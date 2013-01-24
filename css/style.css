@@ -42,30 +42,30 @@ body {
 	background: url( ../images/logo.png ) top center no-repeat;
 }
 
-#social-bar {
+#social-bar-header {
 	margin-top: 15px;
 	text-align: center;
 }
 
-#social-bar li {
+.social-bar li {
 	display: inline-block;
 }
 
-#social-bar a {
+.social-bar a {
 	height: 40px;
 	width: 40px;
 	display: block;
 }
 
-#social-bar .facebook {
+.social-bar .facebook {
 	background: url( ../images/icon_facebook.png ) top left no-repeat;
 }
 
-#social-bar .twitter {
+.social-bar .twitter {
 	background: url( ../images/icon_twitter.png ) top left no-repeat;
 }
 
-#social-bar .nerdhub {
+.social-bar .nerdhub {
 	background: url( ../images/icon_nerdhub.png ) top left no-repeat;
 }
 
@@ -281,36 +281,33 @@ body {
 	color: #fff;
 }
 
+#footer h3 {
+	text-transform: uppercase;
+	font-size: 2.8em; /* 28px */
+	margin-bottom: 50px;
+	font-weight: 700;
+}
+
 #footer-left {
 	float: left;
 	height: 100%;
 	width: 72.916666667%; /* 700/960 * 100 */
 }
 
-#footer-right {
-	float: left;
-	height: 100%;
-	width: 27.083333333%; /* 260/960 * 100 */
-	text-align: right;
-}
-
-#footer-bottom {
-	clear: both;
-}
-
 #keywords {
 	text-transform: uppercase;
 	font-size: 2.8em; /* 28px */
+	line-height: 0.8em;
 }
 
 #keywords dt {
-	margin-bottom: 50px;
-	font-weight: 700;
+	display: none;
 }
 
 #keywords dd {
 	display: inline-block;
 	font-weight: 200;
+	padding-bottom: 14px;
 }
 
 #keywords dd:after {
@@ -321,8 +318,51 @@ body {
 	content: none;
 }
 
+#footer-right {
+	float: right;
+	height: 100%;
+	width: 23.958333333%; /* 230/960 * 100 */
+	text-align: right;
+}
+
+#footer-right h4 {
+	border-top: 1px solid #5c5c5c;
+	padding: 10px 0;
+	font-size: 1.6em;
+}
+
+#footer-right .about-owner,
+#footer-right .about-contact {
+	font-size: 1.2em;
+	line-height: 1.3333333333em; /* 16px */
+	padding: 10px 0;
+	border-bottom: 1px solid #5c5c5c;
+}
+
+#footer-bottom {
+	clear: both;
+	padding-top: 20px;
+	min-height: 60px;
+	position: relative;
+}
+
 #copyright {
+	position: absolute;
 	font-size: 12px;
+	bottom: 3px;
+}
+
+#copyright a {
+	text-decoration: none;
+	color: #fff
+}
+
+#copyright a:hover {
+	text-decoration: underline;
+}
+
+#social-bar-footer {
+	float: right;
 }
 
 /**

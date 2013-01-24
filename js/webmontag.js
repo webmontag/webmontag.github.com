@@ -5,7 +5,8 @@ function initialize() {
 
 	var secheltLoc = new google.maps.LatLng(50.94895731663069, 6.986802443861961);
 	var myMapOptions = {
-		zoom: 12,
+		zoom: 14,
+		scrollwheel: false,
 		center: secheltLoc,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
