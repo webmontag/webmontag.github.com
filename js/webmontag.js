@@ -59,6 +59,9 @@
 					parseFloat( loc[1] )
 				);
 
+				if ( ! self.mapInstance.getCenter() )
+					self.mapInstance.setCenter( position );
+
 				// Check if a title exists
 				var title = el.data( 'title' ) || '';
 
@@ -194,8 +197,7 @@
 			canvas: $( '#map-canvas' ), // The place of the map
 			markers: $( '#map-markers > div' ), // The markers
 			map: {
-				scrollwheel: false, // Don't scroll the map when scrolling over with the wheel
-				center : new google.maps.LatLng( 50.941285, 6.958187 ) // Cologne
+				scrollwheel: false // Don't scroll the map when scrolling over with the wheel
 			},
 			marker : {
 				icon: new google.maps.MarkerImage(
