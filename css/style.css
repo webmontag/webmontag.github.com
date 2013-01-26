@@ -33,6 +33,7 @@ body {
  */
 #header {
 	padding-top: 100px;
+	height: 436px;
 }
 
 #header h1 {
@@ -73,8 +74,8 @@ body {
  * Page Content
  */
 #content {
+	border-top: 10px solid #b2fc52;
 	padding: 0 11.905%; /* (1260-960)/2 = 300 */
-	margin-top: 120px;
 	min-height: 320px;
 }
 
@@ -99,8 +100,8 @@ body {
 }
 
 #event-box {
-	margin-top: -7px;
-	padding: 37px 0;
+	margin-top: -10px;
+	padding: 40px 0;
 	width: 33.33333333333%; /* 320/960 * 100 */
 	min-height: 380px;
 	float: right;
@@ -443,6 +444,12 @@ body {
 	border-bottom: 1px solid #5c5c5c;
 }
 
+
+/* iOS adds a blue colored link around tel numbers... */
+#footer-right a {
+	color: #fff;
+}
+
 #footer-bottom {
 	clear: both;
 	padding-top: 20px;
@@ -525,7 +532,6 @@ body {
  * Responsive Design
  */
 @media screen and (max-width: 1280px) {
-	#page,
 	#header h1,
 	#social-bar li a,
 	#twitter-icon {
@@ -536,24 +542,14 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+	#page {
+		-webkit-background-size: 1024px 354px;
+		-moz-background-size:    1024px 354px;
+		background-size:         1024px 354px;
+	}
 	#header {
-		padding-top: 20px;
-	}
-	#next-event {
-		font-size: 75%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	#header h1 {
-		width: 397px;
-		height: 127px;
-	}
-	#main {
-		margin-top: 100px;
-	}
-	#content {
-		margin-top: 70px;
+		padding-top: 67px;
+		height: 354px;
 	}
 	#content,
 	#twitter-box,
@@ -562,19 +558,37 @@ body {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+	#next-event {
+		font-size: 90%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#page {
+		-webkit-background-size: 768px 266px;
+		-moz-background-size:    768px 266px;
+		background-size:         768px 266px;
+	}
+	#header {
+		padding-top: 30px;
+		height: 266px;
+	}
+	#header h1 { /* 90% */
+		width: 477px;
+		height: 152px;
+	}
 	#backtotop {
 		right: 3%;
 	}
 	#twitter-embed {
 		width: 70.833333334%;
 	}
+	#next-event {
+		font-size: 83%;
+	}
 }
 
 @media screen and (max-width: 600px) {
-	#header h1 { /* 75% */
-		width: 265px;
-		height: 85px;
-	}
 	#intro {
 		width: 100%;
 		float: none;
@@ -594,6 +608,15 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+	#page {
+		-webkit-background-size: 480px 166px;
+		-moz-background-size:    480px 166px;
+		background-size:         480px 166px;
+	}
+	#header {
+		padding-top: 34px;
+		height: 166px;
+	}
 	#header h1 { /* 50% */
 		max-width: 320px;
 		height: 100px;
@@ -601,11 +624,8 @@ body {
 	#social-bar-header li a {
 		display: none;
 	}
-	#content {
-		margin-top: 0;
-	}
 	#next-event {
-		font-size: 75%;
+		font-size: 90%;
 	}
 	#map-canvas {
 		height: 250px;
@@ -669,8 +689,18 @@ body {
 }
 
 @media screen and (max-width: 320px) {
-	#content {
-		margin-top: -50px;
+	#page {
+		-webkit-background-size: 320px 111px;
+		-moz-background-size:    320px 111px;
+		background-size:         320px 111px;
+	}
+	#header {
+		padding-top: 11px;
+		height: 111px;
+	}
+	#header h1 {
+		max-width: 280px;
+		height: 89px;
 	}
 	#twitter-icon {
 		display: none;
