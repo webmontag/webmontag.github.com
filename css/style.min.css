@@ -48,4 +48,5 @@ button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{ove
 #contact-form textarea{height:10em;min-height:10em}.contact-form-submit{position:relative;right:auto;width:100%;margin:0}#footer h3{margin-bottom:20px}
 #footer-right,#footer-left{float:none;width:100%}#keywords dd{font-size:80%}#footer-right{text-align:center}#copyright{position:relative;text-align:center}
 #social-bar-footer{float:none;text-align:center;margin-top:10px}.infobox{width:200px!important}.location-icon{display:none}.infobox div{padding:5px;text-align:center}
-.infobox p{float:none;margin:0}.infobox:after,.infobox:before{display:none}}@media screen and (max-width:320px){#content{margin-top:-50px}}
+.infobox p{float:none;margin:0}.infobox:after,.infobox:before{display:none}}@media screen and (max-width:320px){#content{margin-top:-50px}#twitter-icon{display:none}
+#twitter-embed{margin:0 auto;width:90%;float:none}}

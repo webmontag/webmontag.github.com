@@ -672,4 +672,12 @@ body {
 	#content {
 		margin-top: -50px;
 	}
+	#twitter-icon {
+		display: none;
+	}
+	#twitter-embed {
+		margin: 0 auto;
+		width: 90%;
+		float: none;
+	}
 }
