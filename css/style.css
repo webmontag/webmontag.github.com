@@ -15,7 +15,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 body {
 	height: 100%;
 	font-family: Lato, serif;
+	font-weight: 400;
 	font-size: 62.5%; /* 16px to 10px */
+	min-width: 320px;
 }
 
 #wrap {
@@ -56,18 +58,19 @@ body {
 	height: 40px;
 	width: 40px;
 	display: block;
+	background: url( ../images/social-icons.png ) top left no-repeat;
 }
 
 .social-bar .facebook {
-	background: url( ../images/icon_facebook.png ) top left no-repeat;
+	background-position: 0 0;
 }
 
 .social-bar .twitter {
-	background: url( ../images/icon_twitter.png ) top left no-repeat;
+	background-position: -80px 0;
 }
 
 .social-bar .nerdhub {
-	background: url( ../images/icon_nerdhub.png ) top left no-repeat;
+	background-position: -40px 0;
 }
 
 /**
