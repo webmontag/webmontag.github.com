@@ -70,8 +70,7 @@ table{border-collapse:collapse;border-spacing:0}
 #twitter-icon{width:22.916666667%;height:100%;float:left;background:transparent url(../images/twitter_vogel.png) 0 55px no-repeat}
 #twitter-embed{margin-left:20px;width:47.916666667%;float:left;position:relative}
 #twitter-embed .twitter-timeline-rendered{width:100%!important}
-#contact{clear:both;margin-top:30px;background:#f5f5f5;min-height:300px;border-bottom:10px solid #b2fc52;padding:30px 11.905%}
-#contact h2{text-transform:uppercase;font-size:2.8em;color:#333;margin-bottom:30px}
+.contact{text-transform:uppercase;font-size:2.8em;clear:both;margin-top:30px;margin-bottom:30px;color:#333;background:#f5f5f5;min-height:200px;border-bottom:10px solid #b2fc52;padding:30px 11.905%}
 #contact-form{position:relative}
 #contact-form textarea,#contact-form input[type=text]{width:49%;border:0;font-family:Vollkorn, sans-serif;font-size:1.6em;height:1.875em;padding:.5em 1em .3em}
 #contact-form textarea{float:left;height:20em;min-height:20em;resize:vertical}
@@ -109,7 +108,7 @@ legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 @media screen and max-width 1024px {
 #page{-webkit-background-size:1024px 354px;-moz-background-size:1024px 354px;background-size:1024px 354px}
 #header{padding-top:67px;height:354px}
-.content,#twitter-box,#contact,#footer{padding-left:3%;padding-right:3%}
+.content,#twitter-box,.contact,#footer{padding-left:3%;padding-right:3%}
 }
 @media screen and max-width 768px {
 #page{-webkit-background-size:768px 266px;-moz-background-size:768px 266px;background-size:768px 266px}
