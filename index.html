@@ -7,7 +7,7 @@
 	<meta name="description" content="Webmontag Köln - Informelle Treffen derjeniger, welche die Zukuft des Internets gestalten." />
 
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,700,900|Vollkorn" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="css/style.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="shortcut icon" href="favicon.ico" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,8 +29,43 @@
 				</aside>
 			</div>
 
-			<div id="content">
-				<div id="intro">
+			<!--
+				NOTICE: SEE DUPLICATED GERMAN CONTENT BELOW!
+			-->
+			<div id="content-en" class="content" style="display: none;" lang="en">
+                <div class="intro">
+					<a href="javascript:$('#content-en').hide();$('#content-de').show();eventBox.resizeTriangle();">Zur Deutschen Version</a>
+
+                    <h2>It all started in Cologne …</h2>
+                    <p>Web Monday is an informal, non-commercial, and completely community-driven event that aims to connect the people who are shaping the future of the internet. Inspired by the culture of Silicon Valley, it started out in Cologne, Germany in late 2005 in an effort to help spread those sunny California vibes.</p>
+                    <p>Since its inception, Web Monday has spread fast: meetings are now being held on a regular basis in 40+ cities all across Germany, Austria, in Switzerland, Sweden, Silicon Valley as well as on Second Life. Nurturing the local web 2.0 and internet startup scenes, Web Monday’s 100+ meetings have attracted 1,000+ repeat participants so far, and good things have come out of it.</p>
+                    <p>Anyone involved in web 2.0 or neighboring fields who is interested in learning and sharing with others is most welcome to join. Whether you are a thinker, builder, designer, founder or funder – Web Monday is your chance to present your product, your service, your startup, or your next big idea to a growing audience of web aficionados.</p>
+                </div>
+				<div class="event-box">
+					<div class="event-box-inner">
+						<h3>Next event</h3>
+						<div class="event-date">June 17th - 7pm</div>
+						<div class="event-location">Die Wohngemeinschaft, 19 Uhr</div>
+						<div class="event-address">Richard-Wagner-Str. 39, Köln</div>
+						<div class="event-attend">
+							<a href="http://webmontag.de/location/koeln/2013-06-17" class="button">Teilnehmen</a>
+						</div>
+						<div class="event-request">
+							<p><a href="http://webmontag.de/location/koeln/2013-06-17#uhr_-_praesentationen_demos">Do you want share something?<br />
+							Add your talk to the wiki!</a></p>
+						</div>
+					</div>
+					<div class="triangle"></div>
+				</div>
+			</div>
+
+			<!--
+				NOTICE: SEE DUPLICATED ENGLISH CONTENT ABOVE!
+			-->
+			<div id="content-de" class="content" style="display: none;" lang="de">
+				<div class="intro">
+					<a href="javascript:$('#content-de').hide();$('#content-en').show();;eventBox.resizeTriangle();">Switch to English version</a>
+
 					<h2>Alles begann in Köln …</h2>
 					<p>Web Montag ist ein informelles, nicht-kommerzielles, dezentral organisiertes Treffen, das zum Ziel hat, all diejenigen
 					miteinander zu verbinden, die die Zukunft des Internet gestalten. Inspiriert von der Kultur Silicon Valleys startete der
@@ -41,30 +76,21 @@
 					ist die Gelegenheit, sein neues Produkt, Service, Startup, oder die nächste große Idee einem stetig wachsenden Publikum von
 					Webbegeisterten vorzustellen.</p>
 				</div>
-                <div id="intro">
-                    <h2>Alles begann in Köln …</h2>
-                    <p>Web Monday is an informal, non-commercial, and completely community-driven event that aims to connect the people who are shaping the future of the internet. Inspired by the culture of Silicon Valley, it started out in Cologne, Germany in late 2005 in an effort to help spread those sunny California vibes.</p>
-                    <p>Since its inception, Web Monday has spread fast: meetings are now being held on a regular basis in 40+ cities all across Germany, Austria, in Switzerland, Sweden, Silicon Valley as well as on Second Life. Nurturing the local web 2.0 and internet startup scenes, Web Monday’s 100+ meetings have attracted 1,000+ repeat participants so far, and good things have come out of it.</p>
-                    <p>Anyone involved in web 2.0 or neighboring fields who is interested in learning and sharing with others is most welcome to join. Whether you are a thinker, builder, designer, founder or funder – Web Monday is your chance to present your product, your service, your startup, or your next big idea to a growing audience of web aficionados.</p>
-                </div>                
-				<div id="event-box">
+				<div class="event-box">
 					<div class="event-box-inner">
 						<h3>Nächster Termin</h3>
-						<div id="next-event">
-							<span class="event-date">17.6</span>
-							<span class="event-location">Die Wohngemeinschaft, 19 Uhr</span>
-							<span class="event-address">Richard-Wagner-Str. 39, Köln</span>
-							<div class="clear"></div>
-						</div>
-						<div id="event-attend">
+						<div class="event-date">17.6. - 19 Uhr</div>
+						<div class="event-location">Die Wohngemeinschaft, 19 Uhr</div>
+						<div class="event-address">Richard-Wagner-Str. 39, Köln</div>
+						<div class="event-attend">
 							<a href="http://webmontag.de/location/koeln/2013-06-17" class="button">Teilnehmen</a>
 						</div>
-						<div id="event-request">
+						<div class="event-request">
 							<p><a href="http://webmontag.de/location/koeln/2013-06-17#uhr_-_praesentationen_demos">Du möchtest den nächsten Vortrag halten?<br />
 							Dann füge Ihn ins Wiki ein!</a></p>
 						</div>
 					</div>
-					<span class="triangle"></span>
+					<div class="triangle"></div>
 				</div>
 			</div>
 
@@ -143,5 +169,16 @@
 	<script src="http://platform.twitter.com/widgets.js"></script>
 	<script src="js/infobox.min.js"></script>
 	<script src="js/webmontag.min.js"></script>
+	<script>
+		/*
+		This is my quick n dirty solution to switch content on this static page
+		based on the user agents prefered language. Should work on all common browsers.
+		*/
+		var language = window.navigator.userLanguage || window.navigator.language;
+		if (language && language.toLowerCase() == 'de') {
+			$('#content-en').hide();
+			$('#content-de').show();
+		}
+	</script>
 </body>
 </html>

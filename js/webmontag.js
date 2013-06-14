@@ -1,8 +1,9 @@
 /*global google, InfoBox, window */
+/*and now map and eventBox. */
+var map, eventBox;
+
 ( function( $ ) {
 	"use strict";
-
-	var map, eventBox;
 
 	map = {
 		/**
@@ -152,15 +153,15 @@
 		 * border-right-width.
 		 */
 		resizeTriangle: function() {
-			var el = $( '.triangle' ),
-				box = $( '#event-box' );
+			$( '.triangle' ).each(function() {
+				var triangle = $(this);
+				var width = triangle.parent().width() / 2;
 
-			var width = box.width() / 2;
-
-			el.css( {
-				'border-left-width' : width,
-				'border-right-width' : width
-			} );
+				triangle.css( {
+					'border-left-width' : width,
+					'border-right-width' : width
+				} );
+			})
 		},
 
 		/**
