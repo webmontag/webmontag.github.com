@@ -46,16 +46,17 @@ body{height:100%;font-family:Lato,serif;font-weight:400;font-size:62.5%;min-widt
 .social-bar .twitter{background-position:-80px 0}
 .social-bar .nerdhub{background-position:-40px 0}
 .content{border-top:10px solid #b2fc52;padding:0 11.905%;min-height:320px}
-.intro{padding:30px 0;width:64.583333333%;float:left}
+.intro{padding:30px 0}
 .intro h2{font-size:2.8em;text-transform:uppercase;font-weight:900;color:#333;margin:1em 0}
-.intro p{font-family:Vollkorn,sans-serif;font-size:1.6em;font-weight:300;margin-top:30px}
-.intro a{font-family:Vollkorn,sans-serif;font-size:1.6em;font-weight:300;color:black}
-.event-box{margin-top:-10px;width:33.33333333333%;min-height:380px;float:right;position:relative}
+.intro p{font-family:Vollkorn,sans-serif;font-size:1.6em;font-weight:300}
+.intro ul,.intro ol{margin:3em;padding:0}
+.intro li{font-family:Vollkorn,sans-serif;font-size:1.6em;font-weight:300}
+.intro a{color:black}
+.event-box{margin-top:-10px;margin-bottom:10px;width:33.33333333333%;min-height:380px;float:right;position:relative}
 .event-box-inner{width:100%;padding:40px 20px;color:#fff;background:#333}
 .event-box h3{font-size:2.8em;text-transform:uppercase;font-weight:900;text-align:center}
 .event-date{font-size:3em;line-height:.75em;font-weight:900;text-align:center;margin:10px 0;padding:20px 0;border-top:1px solid #5c5c5c;border-bottom:1px solid #5c5c5c;width:100%}
-.event-location{font-size:1.6em;line-height:1em}
-.event-address{font-size:1.2em;line-height:1em;margin-top:1em;letter-spacing:.08333333333em}
+.event-location,.event-address{font-size:1.6em;line-height:1em;margin-top:1em;letter-spacing:.08333333333em}
 .event-attend{text-align:center;margin:30px 0}
 .event-request a{color:#fff;display:block;text-align:center;font-size:1.2em;line-height:1.6em}
 .triangle{border-style:solid;border-width:70px 160px 0 160px;border-color:#333 transparent transparent transparent;bottom:-70px;z-index:2}
