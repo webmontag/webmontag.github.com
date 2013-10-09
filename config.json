@@ -1,0 +1,28 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "64c2f859fa518d38db7ec7532855ae34",
+      "css": "wikipedia",
+      "code": 59394,
+      "src": "zocial"
+    },
+    {
+      "uid": "846fae80e47217662041242ee1f15a83",
+      "css": "lanyrd",
+      "code": 59392,
+      "src": "zocial"
+    },
+    {
+      "uid": "6f7586c6f99798c3c1de6123d1f6cfa9",
+      "css": "facebook",
+      "code": 59393,
+      "src": "zocial"
+    }
+  ]
+}

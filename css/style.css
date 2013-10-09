@@ -157,14 +157,24 @@ body {
 	letter-spacing: 0.08333333333em; /* 1px */
 }
 
-.event-attend {
+.event-attend-buttons {
 	text-align: center;
 	margin: 30px 0;
 }
 
+.event-request {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.event-attend {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top:20px;
+}
+
 .event-request a {
 	color: #fff;
-	display: block;
 	text-align: center;
 	font-size: 1.2em; /* 12px */
 	line-height: 1.6em; /* 16px */
@@ -508,6 +518,7 @@ body {
 	background-image:      -o-linear-gradient(top, #fff, #ededed);
 	background-image:   linear-gradient(to bottom, #fff, #ededed);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.56);
+	margin-bottom: 10px;
 }
 
 .button:hover,
