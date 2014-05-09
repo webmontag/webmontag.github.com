@@ -137,6 +137,9 @@ body {
 	font-weight: 900;
 	text-align: center;
 }
+.event-box h3 a {
+	color: #b2fc52;
+}
 
 .event-date {
 	font-size: 3em; /* 40px */
