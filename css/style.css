@@ -83,7 +83,7 @@ body {
 }
 
 .intro {
-	padding: 30px 0;
+	margin: 30px 35% 30px 0; /* see event box */
 }
 
 .intro h2 {
@@ -595,6 +595,7 @@ body {
 @media screen and (max-width: 600px) {
 	.intro {
 		width: 100%;
+		margin: 30px 0;
 		float: none;
 	}
 	.event-box {
