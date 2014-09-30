@@ -83,7 +83,7 @@ body {
 }
 
 .intro {
-	padding: 30px 0;
+	margin: 30px 35% 30px 0; /* see event box */
 }
 
 .intro h2 {
@@ -91,13 +91,17 @@ body {
 	text-transform: uppercase;
 	font-weight: 900;
 	color: #333;
-	margin: 1em 0;
+	margin: 0.6em 0;
 }
 
 .intro p {
 	font-family: Vollkorn, sans-serif;
 	font-size: 1.6em; /* 16px */
 	font-weight: 300;
+	margin: 0.4em 0;
+}
+.intro > p:first-child {
+	margin-bottom: 2em;
 }
 
 .intro ul, .intro ol {
@@ -136,6 +140,9 @@ body {
 	text-transform: uppercase;
 	font-weight: 900;
 	text-align: center;
+}
+.event-box h3 a {
+	color: #b2fc52;
 }
 
 .event-date {
@@ -592,6 +599,7 @@ body {
 @media screen and (max-width: 600px) {
 	.intro {
 		width: 100%;
+		margin: 30px 0;
 		float: none;
 	}
 	.event-box {
